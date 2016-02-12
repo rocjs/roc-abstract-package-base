@@ -1,0 +1,6 @@
+**/lib
+**/esdocs
+**/examples
+**/coverage
+**/docs
+**/node_modules/**
