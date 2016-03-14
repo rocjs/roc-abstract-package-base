@@ -8,10 +8,10 @@ In general; for a package to be considered valid it must export a `roc` object t
 It may or may not provide additional exports.
 
 ## Documentation
-- [Action](/docs/Actions.md) _(Has no actions)_
-- [Commands](/docs/Commands.md)
-- [Hooks](/docs/Hooks.md) _(Has no hooks)_
-- [Settings](/docs/Settings.md) _(Has no settings)_
+- [Action](/packages/roc-package-core/docs/Actions.md) _(Has no actions)_
+- [Commands](/packages/roc-package-core/docs/Commands.md)
+- [Hooks](/packages/roc-package-core/docs/Hooks.md) _(Has no hooks)_
+- [Settings](/packages/roc-package-core/docs/Settings.md) _(Has no settings)_
 
 ## Development
-Used with [roc-package-core-dev](https://github.com/rocjs/roc-package-core/blog/master/packages/roc-package-core-dev/README.md).
+Used with [roc-package-core-dev](https://github.com/rocjs/roc-package-core/blob/master/packages/roc-package-core-dev/README.md).

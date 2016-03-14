@@ -1,9 +1,17 @@
 // Based on release script by Michael Jackson - @mjackson
 const resolvePath = require('path').resolve;
 const readFileSync = require('fs').readFileSync;
-const exec = require('shelljs').exec;
+const shellExec = require('shelljs').exec;
 const prompt = require('readline-sync').question;
 const name = require('../package.json').name;
+
+// exec wrapper that handles exit codes
+const exec = (command) => {
+    if (shellExec(command).code !== 0) {
+        console.log('The command failed with a non 0 exit code.');
+        process.exit(1);
+    }
+};
 
 // Will base the version number on the main package
 const getVersion = () =>
@@ -19,7 +27,7 @@ if (process.cwd() !== resolvePath(__dirname, '..')) {
 const nextVersion = prompt(`Next version (current version is ${getVersion()})? `);
 const isPrerelease = nextVersion.substring(0, 3) === 'pre';
 
-// 1) Make sure the tests pass
+// 1) Make sure the build passes
 exec('npm run build');
 
 // 2) Make sure the tests pass
