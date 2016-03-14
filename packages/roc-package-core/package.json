@@ -23,7 +23,7 @@
   "author": "VG",
   "license": "MIT",
   "dependencies": {
-    "roc": "*"
+    "roc": "^1.0.0-rc"
   },
   "devDependencies": {
     "babel-eslint": "~5.0.0",
