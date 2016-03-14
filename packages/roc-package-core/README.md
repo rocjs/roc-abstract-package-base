@@ -14,4 +14,4 @@ It may or may not provide additional exports.
 - [Settings](/packages/roc-package-core/docs/Settings.md) _(Has no settings)_
 
 ## Development
-Used with [roc-package-core-dev](https://github.com/rocjs/roc-package-core/blob/master/packages/roc-package-core-dev/README.md).
+Used with [roc-package-core-dev](/packages/roc-package-core-dev).
