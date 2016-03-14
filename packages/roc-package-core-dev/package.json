@@ -1,0 +1,37 @@
+{
+  "name": "roc-package-core-dev",
+  "version": "1.0.0-alpha.1",
+  "description": "Core package for Roc (Development)",
+  "main": "lib/index.js",
+  "bin": "bin/index.js",
+  "scripts": {
+    "lint": "eslint .",
+    "test": "npm run lint"
+  },
+  "files": [
+    "bin",
+    "lib"
+  ],
+  "keywords": [
+    "roc",
+    "roc-package",
+    "roc-dev"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rocjs/roc-package-core.git"
+  },
+  "author": "VG",
+  "license": "MIT",
+  "dependencies": {
+    "lodash": "~4.5.1",
+    "rimraf": "~2.5.1",
+    "roc": "*",
+    "roc-package-core": "^1.0.0-beta"
+  },
+  "devDependencies": {
+      "babel-eslint": "~5.0.0",
+      "eslint": "~1.10.3",
+      "eslint-config-vgno": "~5.0.0"
+  }
+}
