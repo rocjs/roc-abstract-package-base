@@ -1,6 +1,6 @@
 {
   "name": "roc-package-core-dev",
-  "version": "1.0.0-alpha.1",
+  "version": "1.0.0-alpha.0",
   "description": "Core package for Roc (Development)",
   "main": "lib/index.js",
   "bin": "bin/index.js",
@@ -30,8 +30,8 @@
     "roc-package-core": "^1.0.0-beta"
   },
   "devDependencies": {
-      "babel-eslint": "~5.0.0",
-      "eslint": "~1.10.3",
-      "eslint-config-vgno": "~5.0.0"
+    "babel-eslint": "~5.0.0",
+    "eslint": "~1.10.3",
+    "eslint-config-vgno": "~5.0.0"
   }
 }
