@@ -47,6 +47,8 @@ export default {
             }]
         },
 
-        'after-clean': {}
+        'after-clean': {
+            description: 'Hook point for adding code that runs after the clean command is invoked.'
+        }
     }
 };
