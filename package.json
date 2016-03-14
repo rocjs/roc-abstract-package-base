@@ -9,7 +9,7 @@
     "docs": "node scripts/docs.js",
     "esdocs": "node scripts/esdocs.js",
     "link": "node scripts/link.js",
-    "lint": "eslint packages/roc-package-core/ & eslint packages/packages/roc-package-core-dev & wait",
+    "lint": "node scripts/lint.js",
     "release": "node scripts/release.js",
     "test": "npm run lint"
   },

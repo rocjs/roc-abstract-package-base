@@ -1,4 +1,6 @@
-# Build
+# Settings for `roc-package-core-dev`
+
+## Build
 
 | Name    | Description                                                                                             | Path          | CLI option      | Default   | Type       | Required |
 | ------- | ------------------------------------------------------------------------------------------------------- | ------------- | --------------- | --------- | ---------- | -------- |
@@ -6,7 +8,7 @@
 | output  | The output directory for the build.                                                                     | build.output  | --build-output  | `null`    | `Filepath` | No       |
 | targets | For what targets the code should be built for.                                                          | build.targets | --build-targets | `null`    | `[]`       | No       |
 
-# Dev
+## Dev
 
 | Name    | Description                                                                                             | Path          | CLI option      | Default   | Type       | Required |
 | ------- | ------------------------------------------------------------------------------------------------------- | ------------- | --------------- | --------- | ---------- | -------- |

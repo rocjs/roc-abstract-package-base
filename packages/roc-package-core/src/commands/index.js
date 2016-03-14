@@ -24,9 +24,9 @@ export function listSettings({ metaObject, packageConfig }) {
  *
  * @param {object} rocCommandObject - A command object
  */
-export function markdownSettings({ metaObject, packageConfig }) {
+export function markdownSettings({ info: { name }, metaObject, packageConfig }) {
     /* eslint-disable no-console */
-    console.log(generateMarkdownDocumentation(packageConfig, metaObject));
+    console.log(generateMarkdownDocumentation(name, packageConfig, metaObject));
     /* eslint-enable */
 }
 
