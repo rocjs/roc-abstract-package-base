@@ -9,6 +9,8 @@
 
 ### after-clean
 
+Hook point for adding code that runs after the clean command is invoked.
+
 __Initial value:__ _Nothing_  
 __Expected return value:__ _Nothing_
 
