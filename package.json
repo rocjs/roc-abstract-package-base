@@ -10,6 +10,6 @@
     "test": "npm run lint"
   },
   "devDependencies": {
-    "@rocjs/roc-internal-dev": "^1.0.0"
+    "@rocjs/roc-internal-dev": "^1.1.0"
   }
 }
