@@ -1,5 +1,5 @@
 {
-  "name": "roc-package-core",
+  "name": "roc-package-base",
   "private": true,
   "license": "MIT",
   "scripts": {

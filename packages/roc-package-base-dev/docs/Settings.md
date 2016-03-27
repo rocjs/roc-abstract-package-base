@@ -1,4 +1,4 @@
-# Settings for `roc-package-core-dev`
+# Settings for `roc-package-base-dev`
 
 ## Build
 
@@ -13,4 +13,3 @@
 | Name    | Description                                                                                             | Path          | CLI option      | Default   | Type       | Required |
 | ------- | ------------------------------------------------------------------------------------------------------- | ------------- | --------------- | --------- | ---------- | -------- |
 | debug   | Filter for debug messages that should be shown during development, see https://npmjs.com/package/debug. | dev.debug     | --dev-debug     | `"roc:*"` | `String`   | No       |
-

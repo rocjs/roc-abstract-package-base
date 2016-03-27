@@ -1,4 +1,6 @@
+import build from '../commands/build';
 import clean from '../commands/clean';
+import dev from '../commands/dev';
 
 const config = {
     settings: {
@@ -16,12 +18,8 @@ const config = {
 
     commands: {
         clean,
-        build: () => {
-            throw new Error('Not implemented.');
-        },
-        dev: () => {
-            throw new Error('Not implemented.');
-        }
+        build,
+        dev
     }
 };
 
