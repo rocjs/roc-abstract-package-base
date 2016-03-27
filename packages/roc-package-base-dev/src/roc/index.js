@@ -1,8 +1,8 @@
 import isStringLodash from 'lodash/isString';
 import { isArray, isString, isObject } from 'roc/validators';
 
-import config from './config/roc.config.js';
-import meta from './config/roc.config.meta.js';
+import config from '../config/roc.config.js';
+import meta from '../config/roc.config.meta.js';
 
 import { name } from './util';
 
@@ -11,13 +11,13 @@ export default {
     meta,
     name,
     packages: [
-        require.resolve('roc-package-core')
+        require.resolve('roc-package-base')
     ],
     actions: {
         beforeClean: {
-            extension: 'roc-package-core-dev',
+            extension: name,
             hook: 'before-clean',
-            action: () => () => (settings) => {
+            action: () => ({ settings }) => () => () => {
                 return isStringLodash(settings.build.output) ?
                     [settings.build.output] :
                     Object.keys(settings.build.output)
@@ -26,9 +26,9 @@ export default {
             description: 'Runs before clean command is executed. Returns an array of strings that should be removed.'
         },
         afterClean: {
-            extension: 'roc-package-core-dev',
+            extension: name,
             hook: 'after-clean',
-            action: () => () => () => {
+            action: () => () => () => () => {
                 /* eslint-disable no-console */
                 console.log('Cleaned build directories!');
                 /* eslint-enable */
@@ -49,6 +49,24 @@ export default {
 
         'after-clean': {
             description: 'Hook point for adding code that runs after the clean command is invoked.'
+        },
+
+        'run-build-command': {
+            description: 'Use to add things that should react to the build command being called.',
+            arguments: [{
+                name: 'targets',
+                validation: isArray(isString),
+                description: 'The targets to build for, will be based on settings or a possible argument if defined.'
+            }]
+        },
+
+        'run-dev-command': {
+            description: 'Use to add things that should react to the dev command being called.',
+            arguments: [{
+                name: 'targets',
+                validation: isArray(isString),
+                description: 'The targets use for dev, will be based on settings or a possible argument if defined.'
+            }]
         }
     }
 };

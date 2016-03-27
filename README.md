@@ -1,6 +1,6 @@
-# roc-package-core
-[![Build Status](https://travis-ci.org/rocjs/roc-package-core.svg?branch=master)](https://travis-ci.org/rocjs/roc-package-core)
+# roc-package-base
+[![Build Status](https://travis-ci.org/rocjs/roc-package-base.svg?branch=master)](https://travis-ci.org/rocjs/roc-package-base)
 
 __Package forming an abstract foundation of the Roc ecosystem__  
-- [roc-package-core](/packages/roc-package-core)
-- [roc-package-core-dev](/packages/roc-package-core-dev)
+- [roc-package-base](/packages/roc-package-base)
+- [roc-package-base-dev](/packages/roc-package-base-dev)

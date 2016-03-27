@@ -1,4 +1,4 @@
-# Commands for `roc-package-core-dev`
+# Commands for `roc-package-base`
 
 ## General Information
 All commands can be called with some additional options as can be seen below.
@@ -14,63 +14,35 @@ All commands can be called with some additional options as can be seen below.
 | -v, --version   | Output version number.                                                                                        | No       |
 
 ## Commands
-* [build](#build)
-* [clean](#clean)
-* [dev](#dev)
 * [list-settings](#list-settings)
 * [markdown-actions](#markdown-actions)
 * [markdown-hooks](#markdown-hooks)
 * [markdown-settings](#markdown-settings)
 
-## build
-__Not implemented.__
-
-```
-roc-package-core-dev build
-```
-
-## clean
-__Cleans the current project.__
-
-```
-roc-package-core-dev clean
-```
-
-### Settings options
-* [build](/dev/docs/Settings.md#build)
-
-## dev
-__Not implemented.__
-
-```
-roc-package-core-dev dev
-```
-
 ## list-settings
 __Prints all the available settings that can be changed.__
 
 ```
-roc-package-core-dev list-settings
+roc-package-base list-settings
 ```
 
 ## markdown-actions
 __Prints all the registered actions in a markdown format.__
 
 ```
-roc-package-core-dev markdown-actions
+roc-package-base markdown-actions
 ```
 
 ## markdown-hooks
 __Prints all the registered hooks in a markdown format.__
 
 ```
-roc-package-core-dev markdown-hooks
+roc-package-base markdown-hooks
 ```
 
 ## markdown-settings
 __Prints all the available settings that can be changed in a markdown format.__
 
 ```
-roc-package-core-dev markdown-settings
+roc-package-base markdown-settings
 ```
-
