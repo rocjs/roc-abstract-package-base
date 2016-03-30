@@ -1,5 +1,5 @@
 import isStringLodash from 'lodash/isString';
-import { isArray, isString, isObject } from 'roc/validators';
+import { isArray, isString, isObject, isFunction } from 'roc/validators';
 
 import config from '../config/roc.config.js';
 import meta from '../config/roc.config.meta.js';
@@ -57,7 +57,9 @@ export default {
                 name: 'targets',
                 validation: isArray(isString),
                 description: 'The targets to build for, will be based on settings or a possible argument if defined.'
-            }]
+            }],
+            hasCallback: true,
+            returns: isFunction
         },
 
         'run-dev-command': {
