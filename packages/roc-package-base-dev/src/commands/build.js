@@ -1,6 +1,6 @@
 import { invokeHook } from '../roc/util';
 
-export default function build({
+export default async function build({
     configObject,
     parsedArguments
 }) {
@@ -10,5 +10,12 @@ export default function build({
         targets = configObject.settings.build.targets;
     }
 
-    invokeHook('run-build-command', targets);
+    const builders = [];
+    invokeHook('run-build-command', targets)(function getBuilder(builder) {
+        builders.push(builder);
+    });
+
+    for (const builder of builders) {
+        await builder();
+    }
 }
