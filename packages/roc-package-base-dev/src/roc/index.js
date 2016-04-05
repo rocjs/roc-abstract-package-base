@@ -1,5 +1,5 @@
 import isStringLodash from 'lodash/isString';
-import { isArray, isString, isObject, isFunction } from 'roc/validators';
+import { isArray, isString, isFunction } from 'roc/validators';
 
 import config from '../config/roc.config.js';
 import meta from '../config/roc.config.meta.js';
