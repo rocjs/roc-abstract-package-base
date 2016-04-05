@@ -39,12 +39,7 @@ export default {
     hooks: {
         'before-clean': {
             description: 'Hook point for adding code that runs before the clean command is invoked.',
-            returns: isArray(isString),
-            arguments: [{
-                name: 'settings',
-                validation: isObject(),
-                description: 'The settings object that is received from Roc.'
-            }]
+            returns: isArray(isString)
         },
 
         'after-clean': {
