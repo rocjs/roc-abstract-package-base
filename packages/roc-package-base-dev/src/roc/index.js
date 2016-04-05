@@ -1,5 +1,5 @@
 import isStringLodash from 'lodash/isString';
-import { isArray, isString, isObject, isFunction } from 'roc/validators';
+import { isArray, isString, isFunction } from 'roc/validators';
 
 import config from '../config/roc.config.js';
 import meta from '../config/roc.config.meta.js';
@@ -39,12 +39,7 @@ export default {
     hooks: {
         'before-clean': {
             description: 'Hook point for adding code that runs before the clean command is invoked.',
-            returns: isArray(isString),
-            arguments: [{
-                name: 'settings',
-                validation: isObject(),
-                description: 'The settings object that is received from Roc.'
-            }]
+            returns: isArray(isString)
         },
 
         'after-clean': {
