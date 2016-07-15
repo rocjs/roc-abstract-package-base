@@ -15,7 +15,7 @@ export default {
             debug: {
                 description: 'Filter for debug messages that should be shown during development, see ' +
                     'https://npmjs.com/package/debug.',
-                validator: isString,
+                validator: notEmpty(isString),
             },
         },
         build: {

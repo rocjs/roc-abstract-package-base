@@ -21,7 +21,7 @@ __Expected return value:__ `{}`
 #### Arguments
 | Name        | Description                                                                  | Type       | Required | Can be empty |
 | ----------- | ---------------------------------------------------------------------------- | ---------- | -------- | ------------ |
-| getSettings | A function that returns the settings after the context has been initialized. | `Function` | No       | Yes          |
+| getSettings | A function that returns the settings after the context has been initialized. | `Function` | No       |              |
 
 ## roc-abstract-package-base-dev
 
