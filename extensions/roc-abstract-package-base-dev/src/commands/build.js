@@ -1,27 +1,30 @@
+import log from 'roc/log/default/small';
+
 import { invokeHook } from '../roc/util';
 
 /**
  * Builds the project.
- *
- * @property {object} config - The roc configuration object.
- * @property {object} parsedArguments - The parsed arguments from roc.
  */
 export default async function build({
     context: { config },
-    parsedArguments,
+    arguments: { managed },
 }) {
-    let { targets } = parsedArguments.arguments;
+    let { targets } = managed;
 
     if (!targets) {
         targets = config.settings.build.targets;
     }
 
-    const builders = [];
-    invokeHook('run-build-command', targets)((builder) => {
-        builders.push(builder);
-    });
+    try {
+        const builders = [];
+        invokeHook('run-build-command', targets)((builder) => {
+            builders.push(builder);
+        });
 
-    for (const builder of builders) {
-        await builder();
+        for (const builder of builders) {
+            await builder();
+        }
+    } catch (error) {
+        log.error('An error happened while building', error);
     }
 }

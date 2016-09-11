@@ -5,7 +5,7 @@ import isString from 'lodash/isString';
  *
  * @property {object} settings - The settings from roc.
  */
-export default function beforeClean({ config: { settings } }) {
+export default function beforeClean({ context: { config: { settings } } }) {
     return () => () => (
         isString(settings.build.output) ?
             [settings.build.output] :

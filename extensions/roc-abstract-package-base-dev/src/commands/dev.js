@@ -2,15 +2,12 @@ import { invokeHook } from '../roc/util';
 
 /**
  * Starts the project in development mode.
- *
- * @property {object} config - The roc configuration object.
- * @property {object} parsedArguments - The parsed arguments from roc.
  */
 export default function dev({
     context: { config },
-    parsedArguments,
+    arguments: { managed },
 }) {
-    let { targets } = parsedArguments.arguments;
+    let { targets } = managed;
 
     if (!targets) {
         targets = config.settings.build.targets;

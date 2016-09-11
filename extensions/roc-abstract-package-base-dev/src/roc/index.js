@@ -13,16 +13,13 @@ const lazyRequire = lazyFunctionRequire(require);
  * The roc object that other packages can base themselves on.
  */
 export default {
-    description:
-`Package forming an abstract foundation of the Roc ecosystem.
+    description: `
+        Package forming an abstract foundation of the Roc ecosystem.
 
-The package serves as a base from which other \`dev\` packages within the ecosystem are to be constructed.
-It is therefore _never to be included_ as a direct dependency in app or component projects.`,
+        The package serves as a base from which other \`dev\` packages within the ecosystem are to be constructed.
+        It is therefore _never to be included_ as a direct dependency in app or component projects.`,
     config,
     meta,
-    packages: [
-        require.resolve('roc-abstract-package-base'),
-    ],
     commands: {
         development: {
             __meta: {
@@ -32,12 +29,13 @@ It is therefore _never to be included_ as a direct dependency in app or componen
             build: {
                 command: lazyRequire('../commands/build'),
                 settings: ['build'],
-                arguments: [{
-                    name: 'targets',
-                    validator: isArray(isString),
-                    description: 'The targets the project should be built for, overrides the settings if provided.',
-                    converter: toArray(toString),
-                }],
+                arguments: {
+                    targets: {
+                        validator: isArray(isString),
+                        description: 'The targets the project should be built for, overrides the settings if provided.',
+                        converter: toArray(toString),
+                    },
+                },
                 description: 'Used to build the current project.',
             },
             clean: {
@@ -48,12 +46,13 @@ It is therefore _never to be included_ as a direct dependency in app or componen
             dev: {
                 command: lazyRequire('../commands/dev'),
                 settings: ['build'],
-                arguments: [{
-                    name: 'targets',
-                    validator: isArray(isString),
-                    description: 'The targets the project should be built for, overrides the settings if provided.',
-                    converter: toArray(toString),
-                }],
+                arguments: {
+                    targets: {
+                        validator: isArray(isString),
+                        description: 'The targets the project should be built for, overrides the settings if provided.',
+                        converter: toArray(toString),
+                    },
+                },
                 description: 'Used to start the current project in development mode.',
             },
         },
@@ -81,21 +80,25 @@ It is therefore _never to be included_ as a direct dependency in app or componen
         },
         'run-build-command': {
             description: 'Use to add things that should react to the build command being called.',
-            arguments: [{
-                name: 'targets',
-                validator: required(notEmpty(isArray(isString))),
-                description: 'The targets to build for, will be based on settings or a possible argument if defined.',
-            }],
+            arguments: {
+                targets: {
+                    validator: required(notEmpty(isArray(isString))),
+                    description: 'The targets to build for, will be based on settings ' +
+                        'or a possible argument if defined.',
+                },
+            },
             hasCallback: true,
             returns: isFunction,
         },
         'run-dev-command': {
             description: 'Use to add things that should react to the dev command being called.',
-            arguments: [{
-                name: 'targets',
-                validator: required(notEmpty(isArray(isString))),
-                description: 'The targets use for dev, will be based on settings or a possible argument if defined.',
-            }],
+            arguments: {
+                targets: {
+                    validator: required(notEmpty(isArray(isString))),
+                    description: 'The targets use for dev, will be based on settings ' +
+                        'or a possible argument if defined.',
+                },
+            },
         },
     },
 };
