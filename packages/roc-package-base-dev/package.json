@@ -26,8 +26,8 @@
   "dependencies": {
     "lodash": "~4.5.1",
     "rimraf": "~2.5.1",
-    "roc": "^1.0.0-rc",
-    "roc-package-base": "^1.0.0-alpha"
+    "roc": "1.0.0-rc.10",
+    "roc-package-base": "1.0.0-alpha.8"
   },
   "devDependencies": {
     "babel-eslint": "~5.0.0",
