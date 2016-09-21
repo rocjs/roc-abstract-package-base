@@ -1,6 +1,6 @@
 {
   "name": "roc-package-base-dev",
-  "version": "1.0.0-alpha.7",
+  "version": "1.0.0-alpha.10",
   "description": "Base for Roc packages (Development)",
   "main": "lib/index.js",
   "bin": "bin/index.js",
@@ -27,7 +27,7 @@
     "lodash": "~4.5.1",
     "rimraf": "~2.5.1",
     "roc": "1.0.0-rc.10",
-    "roc-package-base": "1.0.0-alpha.8"
+    "roc-package-base": "1.0.0-alpha.10"
   },
   "devDependencies": {
     "babel-eslint": "~5.0.0",
