@@ -1,6 +1,6 @@
 {
   "name": "roc-abstract-package-base-dev",
-  "version": "1.0.0-beta.0",
+  "version": "1.0.0-beta.1",
   "description": "Abstract base for Roc packages (Development)",
   "main": "lib/index.js",
   "scripts": {
@@ -18,11 +18,14 @@
   ],
   "repository": "https://github.com/rocjs/roc-abstract-package-base/tree/master/extensions/roc-abstract-package-base-dev",
   "author": "Verdens Gang AS",
-  "contributors": [{
+  "contributors": [
+    {
       "name": "Gustaf Dalemar"
-    }, {
+    },
+    {
       "name": "Andreas Søvik"
-  }],
+    }
+  ],
   "license": "MIT",
   "dependencies": {
     "lodash": "~4.5.1",
