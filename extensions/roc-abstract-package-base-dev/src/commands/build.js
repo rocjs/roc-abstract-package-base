@@ -15,6 +15,11 @@ export default async function build({
         targets = config.settings.build.targets;
     }
 
+    // Default NODE_ENV to production if not already defined
+    if (!process.env.NODE_ENV) {
+        process.env.NODE_ENV = 'production';
+    }
+
     try {
         const builders = [];
         invokeHook('run-build-command', targets)((builder) => {
